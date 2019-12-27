@@ -1,13 +1,20 @@
 """Hello Analytics Reporting API V4."""
+import datetime
+import json
 import os
 
+import dotenv
+import requests
 from apiclient.discovery import build
 from oauth2client.service_account import ServiceAccountCredentials
 
+dotenv.load_dotenv(dotenv_path=os.environ.get("SYMODON_PIXELA_TOOLS_DOTENV", ".env"))
 
 SCOPES = ['https://www.googleapis.com/auth/analytics.readonly']
 KEY_FILE_LOCATION = os.environ.get("SYMODON_PIXELA_TOOLS_KEY_FILE_LOCATION")
 VIEW_ID = os.environ.get("SYMODON_PIXELA_TOOLS_VIEW_ID")
+PIXELA_API_URL = os.environ.get("SYMODON_PIXELA_TOOLS_PIXELA_URL")
+PIXELA_API_TOKEN = os.environ.get("SYMODON_PIXELA_TOOLS_PIXELA_TOKEN")
 
 
 def initialize_analyticsreporting():
@@ -38,7 +45,7 @@ def get_report(analytics):
         'reportRequests': [
         {
           'viewId': VIEW_ID,
-          'dateRanges': [{'startDate': '7daysAgo', 'endDate': 'today'}],
+          'dateRanges': [{'startDate': 'yesterday', 'endDate': 'yesterday'}],
           'metrics': [{'expression': 'ga:sessions'}],
           'dimensions': [{'name': 'ga:country'}]
         }]
@@ -73,8 +80,23 @@ def print_response(response):
 def main():
   analytics = initialize_analyticsreporting()
   response = get_report(analytics)
-  print(response)
-  print_response(response)
+  data = {
+      "quantity": response["reports"][0]["data"]["totals"][0]["values"][0],
+      "date": (datetime.date.today() - datetime.timedelta(days=1)).strftime("%Y%m%d"),
+  }
+  resp = requests.post(
+      PIXELA_API_URL,
+      data=json.dumps(data),
+      headers={
+          "Content-Type": "application/json",
+          "X-USER-TOKEN": PIXELA_API_TOKEN,
+      },
+  )
+  if not resp.ok:
+    print(resp.content)
+    resp.raise_for_status()
+  else:
+    print("Done!!:", data)
 
 if __name__ == '__main__':
   main()
