@@ -1,0 +1,41 @@
+#+TITLE: Symson Pixela Tootls
+#+STARTUP: indent hidestars inlineimages
+
+* How To Use It
+
+** Setup
+
+1. Copy .env file from .env.example
+
+  #+BEGIN_SRC
+  cp .env.example .env
+  #+END_SRC
+
+2. Edit .env
+
+  #+BEGIN_SRC
+  vi .env
+  #+END_SRC
+
+3. Install dependencies
+
+  #+BEGIN_SRC
+  pip3 install -r requirements.txt
+  #+END_SRC
+
+** Run
+
+#+BEGIN_SRC
+python3 HelloAnalytics.py
+#+END_SRC
+
+* Environment Variables
+
+|----------------------------------------+-----------------------------------------------------------------------|
+| Environment Variable                   | Description                                                           |
+|----------------------------------------+-----------------------------------------------------------------------|
+| SYMODON_PIXELA_TOOLS_KEY_FILE_LOCATION | Google API Client credentials file path                               |
+| SYMODON_PIXELA_TOOLS_VIEW_ID           | Your Google Analytics View ID                                         |
+| SYMODON_PIXELA_TOOLS_PIXELA_URL        | Pixela API URL  (ex: https://pixe.la/v1/users/test/graphs/test-graph) |
+| SYMODON_PIXELA_TOOLS_PIXELA_TOKEN      | Pixela API Token                                                      |
+|----------------------------------------+-----------------------------------------------------------------------|
