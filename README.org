@@ -43,8 +43,8 @@ python3 HelloAnalytics.py
 |----------------------------------------+-----------------------------------------------------------------------|
 | Environment Variable                   | Description                                                           |
 |----------------------------------------+-----------------------------------------------------------------------|
-| SYMODON_PIXELA_TOOLS_KEY_FILE_LOCATION | Google API Client credentials file path                               |
-| SYMODON_PIXELA_TOOLS_VIEW_ID           | Your Google Analytics View ID                                         |
-| SYMODON_PIXELA_TOOLS_PIXELA_URL        | Pixela API URL  (ex: https://pixe.la/v1/users/test/graphs/test-graph) |
-| SYMODON_PIXELA_TOOLS_PIXELA_TOKEN      | Pixela API Token                                                      |
+| SYMDON_PIXELA_TOOLS_KEY_FILE_LOCATION  | Google API Client credentials file path                               |
+| SYMDON_PIXELA_TOOLS_VIEW_ID            | Your Google Analytics View ID                                         |
+| SYMDON_PIXELA_TOOLS_PIXELA_URL         | Pixela API URL  (ex: https://pixe.la/v1/users/test/graphs/test-graph) |
+| SYMDON_PIXELA_TOOLS_PIXELA_TOKEN       | Pixela API Token                                                      |
 |----------------------------------------+-----------------------------------------------------------------------|
