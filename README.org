@@ -1,4 +1,4 @@
-#+TITLE: Symson Pixela Tootls
+#+TITLE: Symdon Pixela Tootls
 #+STARTUP: indent hidestars inlineimages
 
 * How To Use It
