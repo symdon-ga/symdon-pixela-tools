@@ -3,31 +3,40 @@
 
 * How To Use It
 
-** Setup
-
-1. Copy .env file from .env.example
-
-  #+BEGIN_SRC
-  cp .env.example .env
-  #+END_SRC
-
-2. Edit .env
-
-  #+BEGIN_SRC
-  vi .env
-  #+END_SRC
-
-3. Install dependencies
-
-  #+BEGIN_SRC
-  pip3 install -r requirements.txt
-  #+END_SRC
-
 ** Run
 
 #+BEGIN_SRC
 python3 HelloAnalytics.py
 #+END_SRC
+
+** Setup
+
+1. Setup Google Analytics and download service account credentials json
+
+  See https://developers.google.com/analytics/devguides/reporting/core/v4/quickstart/service-py?hl=ja.
+
+2. Setup Pixela Account
+
+  See https://pixe.la/
+
+3. Copy .env file from .env.example
+
+  #+BEGIN_SRC
+  cp .env.example .env
+  #+END_SRC
+
+4. Edit .env
+
+  #+BEGIN_SRC
+  vi .env
+  #+END_SRC
+
+5. Install dependencies
+
+  #+BEGIN_SRC
+  pip3 install -r requirements.txt
+  #+END_SRC
+
 
 * Environment Variables
 
