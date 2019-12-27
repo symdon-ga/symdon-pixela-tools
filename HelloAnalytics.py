@@ -8,13 +8,13 @@ import requests
 from apiclient.discovery import build
 from oauth2client.service_account import ServiceAccountCredentials
 
-dotenv.load_dotenv(dotenv_path=os.environ.get("SYMODON_PIXELA_TOOLS_DOTENV", ".env"))
+dotenv.load_dotenv(dotenv_path=os.environ.get("SYMDON_PIXELA_TOOLS_DOTENV", ".env"))
 
 SCOPES = ['https://www.googleapis.com/auth/analytics.readonly']
-KEY_FILE_LOCATION = os.environ.get("SYMODON_PIXELA_TOOLS_KEY_FILE_LOCATION")
-VIEW_ID = os.environ.get("SYMODON_PIXELA_TOOLS_VIEW_ID")
-PIXELA_API_URL = os.environ.get("SYMODON_PIXELA_TOOLS_PIXELA_URL")
-PIXELA_API_TOKEN = os.environ.get("SYMODON_PIXELA_TOOLS_PIXELA_TOKEN")
+KEY_FILE_LOCATION = os.environ.get("SYMDON_PIXELA_TOOLS_KEY_FILE_LOCATION")
+VIEW_ID = os.environ.get("SYMDON_PIXELA_TOOLS_VIEW_ID")
+PIXELA_API_URL = os.environ.get("SYMDON_PIXELA_TOOLS_PIXELA_URL")
+PIXELA_API_TOKEN = os.environ.get("SYMDON_PIXELA_TOOLS_PIXELA_TOKEN")
 
 
 def initialize_analyticsreporting():
