@@ -1,7 +1,7 @@
 #+TITLE: Symdon Pixela Tootls
 #+STARTUP: indent hidestars inlineimages
 
-* How To Use It
+* How to use it
 
 ** Run
 
