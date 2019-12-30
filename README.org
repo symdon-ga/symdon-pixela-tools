@@ -1,6 +1,8 @@
 #+TITLE: Symdon Pixela Tootls
 #+STARTUP: indent hidestars inlineimages
 
+* THIS REPOSITORY IS NOT MAINTAINED
+
 * How to use it
 
 ** Run
